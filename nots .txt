@@ -1,0 +1,184 @@
+---------------------------------------------------
+vuejs 3 Non-props Data
+
+---------------------------------------------------
+
+1. Make A Child Component
+2. Pass Non-Props Data
+3. Difference between Props and Non-Props Data
+props data defind karn padta hai but 
+Non-Props nahi karan padta hai 
+non-props
+parnts ==>  <UserData xyz="hello-imtiyaz"/>
+child ==> <h3 v-bind="$attrs"> aisa call kar laga 
+ inheritAttrs:false=> jab hame non-props ko send karta hai toh ya main div par jata 
+ isse ko rukn k liya inheritAttrs add karta hai 
+
+ Props: Received from a parent component.
+Non-Props Data: Defined and managed within the component itself.
+Props: Should not be directly modified by the child; instead, events should be emitted to the parent to handle changes.
+Non-Props Data: Can be freely modified within the component.
+
+4. Interview Question.
+
+---------------------------------------------------
+vuejs 3 computed property
+tut27
+---------------------------------------------------
+compex logic k liya used karta hai other methed ya good worak karata hai 
+aur fast bhi hai other methed sa 
+1 . What is Computed Property?
+
+2. Difference Between template Expression and Computed Property.
+3. Example of Computed Property?
+4. Interview Question
+
+---------------------------------------------------
+vuejs 3 Watchers
+tut28 Watchers.vue
+---------------------------------------------------
+1 .What are Watchers?
+2. How to use Watchers?
+3. Example
+4. Interview Question
+
+---------------------------------------------------
+vuejs 3 slots
+tut29 slots.vue
+---------------------------------------------------
+a child component's template that can be customized with content provided by the parent component
+Benefits of using Slots
+Increased Reusability
+Improved Component Structure
+Flexibility for Parent Components: Parent components have more control over the content displayed within the child component
+1. What are Slots
+2. How to use Slots?
+3. Example
+4. Interview Question
+---------------------------------------------------
+vuejs 3  Dynamic Component
+tut31 dynComponet.vue
+---------------------------------------------------
+1. What is a dynamic Component?
+2. Why we should not use "if-else" condition?
+3. Load Dynamic Component in Proper way
+4. Interview Question
+---------------------------------------------------
+vuejs 3  Teleport Component
+tut32 TeleportComponent.vue
+---------------------------------------------------
+jaise ki hamko pata hai ki sab chize id="app" sa aur tab code run hota hai Teleport kay karta hai ki ya id="app" run nahi hota jaise koi header ya footer jo har component main show hota hai waise likan k liya used karta hai
+1 . What is a Teleport Component?
+2. Example of Teleport Component
+3. Use of Teleport Component
+4. Interview Question
+
+---------------------------------------------------
+vuejs 3  Life Cycle methed
+tut33 lifeCyclemeth.vue
+---------------------------------------------------
+1. Human Life Phase Example
+2. Life cycle in Vue js
+1. Create
+2. Mount
+3. Update
+4. Unmount
+
+---------------------------------------------------
+vuejs 3  beforeCreate and Created
+tut34 lifeCyclCreated.vue
+---------------------------------------------------
+1. When they called
+2. Example
+3. Interview Question
+kay beforeCreate main koi change karga toh show hoga 
+ans nahi qki data() sa phela hi ya chalta hai 
+
+---------------------------------------------------
+vuejs 3  beforeMount and Mounted
+tut35 lifeCyclMounted.vue
+---------------------------------------------------
+templet sa phela  beforeMount call hota hai is liya beforeMount null aaya ga
+
+Mounted pura templet show hoga
+
+1. When they called
+2. Example
+3. Interview Question
+kay beforeMount k ander templet kuch coll kar sakta hai jasi id class etc 
+ans nahi kar sakta q ki templet sa phela beforeMount chal ta hai 
+
+---------------------------------------------------
+vuejs 3  beforeUpadat and Updated
+tut36 lifeCyclUpdated.vue
+---------------------------------------------------
+beforeUpadat ya tab call hoga jab ui updata hona wala ho ga hona sa just phela 
+Upadat jab updata hogay ho ga
+1. When they called
+2. Exampl
+3. Interview Question
+kay beforeUpadat and Upadat propaty ka updata hona par hota hai ya ui ka
+ans ui ka updata hona sa hota hai 
+
+used loging karta time check kar sakata hai age check karta time ya if else condison karta time
+
+---------------------------------------------------
+vuejs 3  beforeUnMount and UnMount
+tut37 lifeCyclUnMount.vue
+---------------------------------------------------
+ya tab call hota hai jab koi compunet ko remove ya hide karna hota hai tab
+phele beforeUnMount fir UnMount
+
+isliya karta hai ki aapliction speed memory etc fast ho 
+bhut sara settimeout ya etc  sab band hojaya issliy used karta hai
+
+beforeUnMount main html hoga UnMount main kuch nahi raha ga 
+
+---------------------------------------------------
+vuejs 3  Routing
+tut38 Routing.vue
+---------------------------------------------------
+1. Why we use Routing
+2. Package installation
+  npm i vue-router@next
+3. Make Routing file
+4. Define Routes
+5. Make Link for Routes
+6. Complete example
+
+---------------------------------------------------
+vuejs 3 Dynamic Routing
+tut39 DynamicRouting.vue
+---------------------------------------------------
+1. What is Dynamic Routing
+2. Pass params with routing
+3. Get params in component
+4. Use of dynamic Routing
+
+---------------------------------------------------
+vuejs 3 Api
+tut42 ApiCall.vue
+---------------------------------------------------
+1. What is API
+2. Who Make API
+3. How to test API
+4. API Methods
+5. Example
+---------------------------------------------------
+vuejs 3 call Api
+tut39 tut42 ApiCall.vue
+---------------------------------------------------
+1. Install axios package
+2. Test API with Postman
+3. Make a function to call API
+4. Call API and store API data
+5. Example
+---------------------------------------------------
+vuejs 3 send data to api with post Methed 
+tut39 postApi.vue
+---------------------------------------------------
+1. Make Form
+2. Get Form Value
+3. Test API
+4. Send Data to API
+5. Test API result
