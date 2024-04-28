@@ -1,0 +1,101 @@
+babel.config.js ==> some time using old js and browser version old using 
+ this time bable is working cheage version comtable way 
+
+1st time lode file public-->index.html and js main.js
+
+kay hamlog koi style ko ek hi componet raha isse bhar na jaya aise
+kar sakta hai 
+<style scoped>   using scoped
+
+--------------------------------------------------
+			Interpolation
+--------------------------------------------------
+What is Interpolation in Vue js
+Interpolation in Vue.js is a fundamental concept used to bind data to the HTML template of your Vue application. 
+It allows you to display JavaScript values in the HTML part of your component.
+This is done using the "Mustache" syntax (double curly braces {{ }}), 
+where you can place a JavaScript expression. Vue.js will automatically update the DOM when the data changes,
+making your app reactive.
+
+Pass data script to the template
+Tut-7 Interpolation.vue
+
+vue js template data pass kar sakta hai  ans ha 
+
+ Define methods
+ Use methods
+ this and use data property in functions
+ Interview Question
+ 
+--------------------------------------------------
+			Vue Js Event
+			Tut-9 Event.vue
+--------------------------------------------------
+How to use Ciick Event.
+Tut-9 Event.vue
+
+--------------------------------------------------
+		Vue Js Two-way Binding
+		Tut-10 TwoWayBinding.vue
+--------------------------------------------------
+• What is Two-way binding
+Two-way binding in Vue.js is a mechanism that allows properties in the model to be instantly synchronized with the UI ,
+thereby ensuring that changes in the user interface reflect immediately in the app's data model and changes in the data model immediately update the UI. 
+
+
+The "v-model" directive creates a two-way binding on an input, textarea,
+or select element (or components that emulate these). It automatically picks the correct way to update the element based on the input type. 
+This makes it very useful for creating forms.
+
+ek propty ko module view k sath binding karta hai ta ki immediately  ui par show ho jaya usko Two-way binding
+
+module ==  <script> </script>  ya sab model hai 
+view == <templet>
+
+--------------------------------------------------
+		Vue Js Get input filed value
+	12  ==> Vue Js Get checkbox & Radio btn value
+		Tut-11 getInputFiledVal.vue
+--------------------------------------------------
+
+• Make 2 Input Fields
+
+Make a function for getting value
+
+• Define Data Property
+• Apply two-way binding
+• Interview Question
+
+------------------------------------------------------------
+			Vue Js if-ELSE condition
+		14 ==>  Vue Js for Loop 
+			Tut-13 ifElseConditio.vue
+------------------------------------------------------------
+• Write Html code for show and hide
+• Apply if and else condition
+• If and else condition with a button click
+• Interview Question
+  v-on:click="Show=!Show" toggale !Show dono work karaga 
+------------------------
+• Define Array in Data Property
+Apply Loop on it
+• Define Array of Object in Data Property
+• Apply Loop on it.
+• Interview Question
+------------------------------------------------------------
+			Vue Js pass data to child component
+			Tut-15 0passDataPartner .vue
+			Tut-15 passDataChild.vue
+------------------------------------------------------------
+Q kay vue js child component sa prants data singale click par call 			sakta hai 
+Ans ==> yes
+
+1. Make Child Component
+ done
+2. Import and Use Child Component
+done
+3. Pass Static Data
+done
+4. Pass Property, Object, and Function to
+Child Component
+done plz check this 	Tut-15 0passDataPartner .vue ,  Tut-15 passDataChild.vue

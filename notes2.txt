@@ -1,0 +1,71 @@
+------------------------------------------------------------
+			Vue Js vuejs Props
+			Tut-19 1props.vue
+			Tut-19 2props.vue
+			Tut-19 3props.vue
+------------------------------------------------------------
+props => ek componet sa dusara componet data trasfer karata hai comncation usko props bola t hai jaruri nahi child sa prnts mai jaya 
+
+pass the data with props
+	can pass with props
+
+------------------------------------------------------------
+			Vue Js 3 send data to child to parent component
+			Tut-20 1child&parent.vue
+			Tut-20 2child.vue
+------------------------------------------------------------
+1.make child component
+2.pass data and function as props
+3.share child component with parent
+
+Parent Component:
+Provides data and functionality to its child components through props (properties passed down).
+Child Component:
+A component that is nested within another component (its parent).
+Reuses functionality and UI elements defined in its parent or other components.\
+
+Sibling Components:
+Components that share the same parent component but are not nested within each other.
+Don't have a direct communication channel by default in Vue.js.
+
+------------------------------------------------------------
+			Vue Js Ref
+			Tut-21 1ref.vue
+------------------------------------------------------------
+what is Ref
+main worak DOM ka value ko get aur set style etc k kaam main aata hai 
+
+
+make input field
+apply Ref
+operstion
+Q.ek compount ka ander ek ref used kara sakta hai 
+ans Yes
+Q.Kay 2 input par ref ued kar sakta hai 
+ans no kar sata hai but 2 input changes aaya ga techanial not posible
+
+------------------------------------------------------------
+			Vue Js simple Form
+			Tut-22 simplForm.vue
+			tut-23
+------------------------------------------------------------
+define some input
+applya 2-way binding
+print and submit value
+
+add radio btn checkbox select
+deffine property and bind value 
+
+
+------------------------------------------------------------
+			Vue Js Form validation
+			Tut-24 FormValidation.vue
+------------------------------------------------------------
+
+-----------------------------------------------------------
+			Vue Js Modifiers
+			Tut-25 modifiers.vue
+------------------------------------------------------------
+Modifiers
+jab ham 2 a biding karta hai tab use karta hai  
+how to used Modifiers

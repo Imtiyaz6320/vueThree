@@ -2,6 +2,17 @@
   <!-- <img alt="Vue logo" src="./assets/log.png"> -->
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   <!-- <HelloWorld /> -->
+    <!-- <tutEight/> -->
+  <!-- <tutNine/> -->
+  <!-- <tutTen /> -->
+  <!-- <tutEleven /> -->
+  <!-- <tutThirteen/> -->
+  <!-- <tutFifteen/> -->
+  <!-- <propsOne /> -->
+  <!-- <twentyParent /> -->
+  <!-- <twentyOneRef/> -->
+  <!-- <twentyTwoFom/> -->
+  <!-- <twentyFourValid/> -->
   <!-- <HomeOne /> -->
   <!-- <htmlBinding /> -->
   <!-- <clssBinding /> -->
@@ -36,6 +47,21 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 // import HomeOne from './components/tut-16 HomeOne.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import HomePage from './components/HomePage.vue'
+// import HomePageNew from './components/Tut-7 Interpolation.vue'
+// import tutEight from './components/Tut-8 methed.vue'
+// import tutNine from './components/Tut-9 Event.vue'
+// import tutTen from './components/Tut-10 TwoWayBinding.vue'
+// import tutEleven from './components/Tut-11 getInputFiledVal.vue'
+// import tutThirteen from './components/Tut-13 ifElseConditio.vue'
+// import tutFifteen from './components/Tut-15 0passDataPartner .vue'
+// import propsOne from './components/Tut-19 1props.vue'
+// import twentyParent from './components/Tut-20 1child&parent.vue'
+// import twentyOneRef from './components/Tut-21 1ref.vue'
+// import twentyTwoFom from './components/Tut-22 simplForm.vue'
+// import twentyFourValid from './components/Tut-24 FormValidation.vue'
+// import twentyFiveModifiers from './components/Tut-25 modifiers.vue'
 // import htmlBinding from './components/tut-17 htmlBinding.vue'
 // import clssBinding from './components/tut-18 classBinding.vue'
 // import nonProps from './components/tut-26 Non-Props.vue'
@@ -57,6 +83,21 @@ export default {
   components: {
     // HelloWorld,
     // HomeOne,
+    // HelloWorld,
+    // HomePage,
+    // HomePageNew,
+    // tutEight,
+    // tutNine,
+    // tutTen,
+    // tutEleven,
+    // tutThirteen,
+    // tutFifteen,
+    // propsOne,
+    // twentyParent,
+    // twentyOneRef,
+    // twentyTwoFom,
+    // twentyFourValid,
+    // twentyFiveModifiers,
     // htmlBinding,
     // clssBinding,
     // nonProps,
