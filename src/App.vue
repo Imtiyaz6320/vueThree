@@ -1,3 +1,15 @@
+<!-- console.log("hello imtiyaz");
+const { createApp } = Vue;
+
+
+const app = createApp({
+    template: "<h1>Vue 3 Tutorial</h1>"
+});
+
+
+app.mount('#app'); -->
+
+
 <template>
   <!-- <img alt="Vue logo" src="./assets/log.png"> -->
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->

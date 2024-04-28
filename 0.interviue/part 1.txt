@@ -1,0 +1,58 @@
+What is VueJS?
+
+Vue.js is an open-source JavaScript framework used for building user interfaces and single-page applications. It's known for its ease of integration into projects, its reactive data binding, and its approachable syntax, making it a popular choice among developers for creating dynamic web applications
+
+What are the major features of VueJS?
+
+1. Reactive Data Binding: Automatically updates your UI whenever your data changes.
+2. Components: Reusable custom elements you can use to build your interface.
+3. Templates: VueJS provides HTML based templates that bind the DOM with the Vue instance data
+4. Virtual DOM: Improves performance by minimizing direct DOM manipulation.
+5. Routing: Navigation between pages is achieved through vue-router
+6. Composability: Easily integrate or use alongside other libraries or existing projects.
+7. Easy to Learn: With a gentle learning curve, developers can quickly start building user interfaces.VueJS is light weight library compared to other frameworks.
+
+What are the lifecycle methods of VueJS?
+
+Vue.js lifecycle methods are hooks that allow you to execute code at specific stages of a component's life, from creation to destruction. The key lifecycle methods include:
+
+1. beforeCreate: Runs before the instance is fully initialized.
+2. created: Runs after the instance is created,
+3. beforeMount: Runs right before the mounting begins, before the component is rendered.
+4. mounted: Runs after the component is mounted to the DOM, where you can access the reactive component and templates are rendered.
+5. beforeUpdate: Runs when data changes, before the DOM is patched and re-rendered.
+6. updated: Runs after data changes and the DOM is patched.
+7. beforeDestroy: Runs right before tearing down a component, where you can perform cleanup actions.
+8. destroyed: Runs after a component is destroyed, cleaning up its instance. 
+
+What are the conditional directives?
+
+templates to control their rendering based on certain conditions. The most commonly used conditional directives are v-if, v-else-if, v-else, and v-show. They allow you to conditionally display or hide elements
+
+What is the difference between v-show and v-if directives?
+
+`v-if` removes or adds elements to the DOM based on a condition, while `v-show` just shows or hides the same element using CSS.
+
+What is the purpose of v-for directive?
+
+The `v-for` directive in Vue.js is used for rendering a list of items by iterating over an array or object. It's a powerful tool for dynamically displaying a collection of data in the template.
+
+also used can also use of as the delimiter instead of in, similar to javascript iterators.
+
+What is vue instance?
+Every Vue application works by creating a new Vue instance with the Vue function
+
+
+How do you achieve conditional group of elements?
+
+ by applying v-if directive on <template>
+
+How do you reuse elements with key attribute?
+ try to render the same input element in both v-if and v-else blocks then it holds the previous value as below
+
+
+ Why should not use if and for directives together on the same element?
+ v-for directive has higher priority, so Vue will first try to render the list, and then apply the v-if condition to each item 
+
+
+

@@ -1,0 +1,5 @@
+two- way binding is a one property ko moudul and vue main binding karna ki jab bhi moudul change ho ustime vue show ho  
+
+Vuetify is a popular Vue.js framework that provides a vast collection of ready-to-use components and styles based on Material Design. It aims to assist developers in creating beautiful and functional user interfaces with minimal effort
+
+Vue supports one-way data binding (v-bind or : ) and two-way data binding (v-model) to streamline the process of updating the data and the UI.

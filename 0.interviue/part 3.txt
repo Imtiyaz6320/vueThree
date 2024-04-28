@@ -1,0 +1,25 @@
+1. What is Mixin in Vue.js?
+Mixins are an easier way to distribute reusable functionalities for Vue components
+
+2. Can we call the REST API from Vue.js?
+Yes, we can call a REST API from Vue.js with the help of the Axios library.
+
+3. What is $parent property in Vue.js?
+$parent property enables the child to access parent instances. It is similar to $root Property.
+
+4. Vue consists of how many components?
+Vue consists of three components namely templates, styles, and JavaScript.
+
+5. What is the use of navigation guards in Vue.js?
+The navigation guards in Vue.js are used to guard navigation either by redirecting it or by canceling it. These are provided by the Vue-router.
+
+6. What is instant prototyping in Vue.js?
+Vue.js provides a new feature called instant prototyping with which the developers can build components anywhere on the machine and can preview.
+
+7. What is the purpose of computed properties in Vue.js?
+Computed properties in Vue.js are like calculated values based on your existing data.
+
+8. What is the One-Way Data Flow in Vue.js?
+Vue.js uses One-Way Data Flow, which means data changes flow from the parent component down to its child components.
+
+9. 

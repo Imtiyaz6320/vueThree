@@ -1,0 +1,49 @@
+1.Why do you need to use key attribute on for directive?
+unique key attribute for each item with in v-for iteration
+
+2.What are the array detection non-mutation methods?
+The methods which do not mutate the original array but always return a new array are called non-mutation methods.
+Below are the list of non-mutation methods,
+filter()
+concat()
+slice()
+
+
+3.How do you use event handlers?
+he method calls also support the special $event variable.
+
+
+
+4.What are the event modifiers provided by vue?
+
+.stop
+.prevent
+.capture
+.self
+.once
+.passive
+
+5.What are key modifiers?
+
+v-on
+
+6.How do you implement two-way binding?
+v-model directive to create two-way data bindings on form input, textarea, and select element
+
+7.What are props?
+Props in Vue.js are custom attributes used for passing data from a parent component to a child component. They are a way to make components reusable by giving them the ability to receive data from their parent components, allowing for more dynamic and flexible UI development.
+
+8.How do you communicate from child to parent using events?
+ child wants to communicate back up to the parent, then emit an event from child using $emit object to parent,
+
+ 9.What are possible prop types?
+ props: {
+  name: String,
+  age: Number,
+  isAuthenticated: Boolean,
+  phoneNumbers: Array,
+  address: Object
+}
+
+10. What is the use of the ‘const’ keyword in Vue.js?
+A ‘const’ keyword is used to create constants.

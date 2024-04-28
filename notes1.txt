@@ -1,3 +1,38 @@
+
+What is Vue js?
+JavaScript Framework for building web app.
+Vue js is progressive framework. ()
+Vue js 3 is the current version.
+We make SPA with vue js.
+
+
+History
+Initial Release: Feb 2014.
+The current version is 3.0.5
+vuejs 3 is the current version.
+Vue is created by Evan You.
+Evan you were working for Coogle
+
+
+
+Main Topic of this Series
+
+Introduction
+Setup and Installation
+How to start with code
+Component
+Condition and Loops
+Form handing
+API integration
+Life cycle.
+Routing
+State Managment
+Small Project
+Build
+3rd Party Library
+
+Interview Questions
+
 babel.config.js ==> some time using old js and browser version old using 
  this time bable is working cheage version comtable way 
 
