@@ -1,0 +1,97 @@
+1	What is VueJS
+JavaScript Framework for building web app.
+Vue js is progressive framework. () Vue js 3 is the current version.We make SPA with vue js.
+
+2	What are the major features of VueJS
+Virtual DOM: It uses virtual DOM similar to other existing frameworks such as ReactJS etc. 
+Virtual DOM is a light-weight in-memory tree representation of the original HTML DOM and updated without affecting the original DOM.
+Components: Used to create reusable custom elements in VueJS applications.
+Templates: provides HTML based templates that bind the DOM with the Vue instance data
+Routing: Navigation between pages is achieved through vue-router
+Light weight: VueJS is light weight library compared to other frameworks.
+
+
+3	What are the lifecycle methods of VueJS
+         Create
+         Mount
+         Update
+         Unmount
+       
+
+4	What are the conditional directives
+v-else, v-else-if and v-show
+
+5	What is the difference between v-show and v-if directives
+`v-if` removes elements from the DOM when the condition is false,
+ while `v-show` only toggles the visibility using CSS without removing elements from the DOM.
+
+6	What is the purpose of v-for directive?
+loop `v-for` directive in Vue.js is used to render a list of items by iterating over an array or an object.
+
+7	What is a vue instance?
+A Vue instance is an object created by the Vue function (`new Vue()`) that forms the root of a Vue application. 
+It serves as the central hub where data, methods,
+and directives are bound and managed for rendering and reacting to user interactions on the webpage.
+
+8	How do you achieve a conditional group of elements?
+<template v-if="condition">
+
+9	How do you reuse elements with a key attribute?
+In Vue.js, the `key` attribute is used to manage the reusability of elements by giving them a unique identifier. 
+This helps Vue distinguish between elements, ensuring that they are reused, updated, or replaced correctly based on their identity,
+particularly useful in dynamic elements like lists to maintain internal state or to trigger transitions.
+
+10	Why should you not use if and for directives together on the same element?
+not to use v-if on the same element as v-for. Because v-if directive has a higher priority than v-for
+
+11	Why do you need to use a key attribute on for directive?
+In order to track each node’s identity, and thus reuse and reorder existing elements,
+ you need to provide a unique key attribute for each item with in v-for iteration. 
+ An ideal value for key would be the unique id of each item
+
+12	What are the array detection mutation methods?
+push()
+pop()
+shift()
+unshift()
+splice()
+sort()
+reverse()
+
+13	What are the array detection non mutation methods?
+filter()
+concat()
+slice()
+
+14	What are the caveats of array changes detection?
+Vue cannot detect changes made directly by setting an array index (e.g., `arr[index] = newValue`) or
+ modifying the length of the array (e.g., `arr.length = newLength`). To overcome these limitations, use methods like `Vue.set`, 
+`vm.$set`, or array mutation methods (e.g., `push`, `pop`, `splice`).
+
+15	What are the caveats of object changes detection?
+Vue cannot detect property addition or deletion in objects. If you add a new property after the object has been created, Vue won’t react to those changes. To overcome this,
+ use Vue’s `Vue.set` method or replace the object entirely for reactive updates.
+
+16	How do you use for directive with a range?
+v-for directive which repeats the element many times.
+
+17	How do you use for directive on template?
+Just similar to v-if directive on template, you can also use a <template> tag with v-for directive to render a block of multiple elements
+
+18	How do you use event handlers?
+vue similar to plain javascript. The method calls also support the special $event variable.
+
+19	What are the event modifiers provided by vue?
+.stop
+.prevent
+.capture
+.self
+.once
+.passive
+<!-- the click event's propagation will be stopped -->
+<a v-on:click.stop="methodCall"></a>
+
+20	What are key modifiers?
+modifiers on v-on for handling keyboard events
+<!-- only call `vm.show()` when the `keyCode` is 13 -->
+<input v-on:keyup.13="show">
