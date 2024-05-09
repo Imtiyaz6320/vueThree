@@ -1,3 +1,4 @@
+<!-- chiled components sa prant data kaise send karna  -->
 <template>
     <div class="pl">
         <h1>hello this is calling child to parent</h1>
@@ -8,27 +9,27 @@
 <script>
 import twentyChild from './Tut-20 2child.vue'
 export default {
-    name:"twentyParent",
-    components :{
+    name: "twentyParent",
+    components: {
         twentyChild
     },
     data() {
         return {
-            chaildName:""
+            chaildName: ""
         }
     },
     methods: {
-        getUserName(name){
-            alert(name)
-            this.chaildName = name
+        getUserName(name) {  // mak function send parmiter name 
+            alert(name); // Shows an alert with the name
+            this.chaildName = name; // Updates the chaildName data property with the received name
         }
     },
 }
 </script>
 
 <style scoped>
-.pl{
+.pl {
     background-color: #c3e51b;
-    color: white; 
+    color: white;
 }
 </style>

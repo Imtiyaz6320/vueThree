@@ -17,9 +17,9 @@
             <br><br>
             <h3>Technolgy</h3>
             <label>java :</label>
-            <input type="checkbox" value="java"  v-model="form.technolgy">
+            <input type="checkbox" value="java" v-model="form.technolgy">
             <label>javaScript :</label>
-            <input type="checkbox"  value="javaScript" v-model="form.technolgy">
+            <input type="checkbox" value="javaScript" v-model="form.technolgy">
             <label>nodejs :</label>
             <input type="checkbox" value="nodejs" v-model="form.technolgy">
             <br><br>
@@ -28,7 +28,7 @@
             <label>Male :</label>
             <input type="radio" value="Male" name="Gender" v-model="form.gender">
             <label>Female :</label>
-            <input type="radio"  value="Female" v-model="form.gender" name="Gender">
+            <input type="radio" value="Female" v-model="form.gender" name="Gender">
             <label>Other :</label>
             <input type="radio" value="Other" v-model="form.gender" name="Gender">
             <br><br>

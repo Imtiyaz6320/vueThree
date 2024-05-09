@@ -55,21 +55,21 @@ export default {
                 technology: [], // Ensure this matches your template
                 gender: ''
             },
-           error:[]
+            error: []
         }
     },
     methods: {
         login() {
-            this.error =[]
-            for(const item in this.form){
-                if (this.form[item]==="" || (item === "technology" && this.form[item].length === 0)) {
+            this.error = []
+            for (const item in this.form) {
+                if (this.form[item] === "" || (item === "technology" && this.form[item].length === 0)) {
                     this.error.push(item)
                 }
             }
-            if (this.error.length===0) {
+            if (this.error.length === 0) {
                 alert("data has been sammita")
             }
-            console.log("Login data", this.form,this.error);
+            console.log("Login data", this.form, this.error);
             console.log("error data", this.error);
         }
     },
@@ -80,7 +80,7 @@ export default {
 <style scoped>
 body {
     background-color: #f5f5f5;
-     /* Light gray background for the entire page */
+    /* Light gray background for the entire page */
 }
 
 .form-container {
@@ -88,7 +88,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #e7f0fd; 
+    background-color: #e7f0fd;
     /* Light blue background for the form */
 }
 
@@ -129,4 +129,3 @@ button:hover {
     background-color: #0056b3;
 }
 </style>
-

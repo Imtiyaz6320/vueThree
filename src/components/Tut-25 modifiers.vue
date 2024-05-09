@@ -30,6 +30,7 @@
   
   <script>
   export default {
+    name: "twentyFiveModifiers3.6",
     data() {
       return {
         // userData object to hold form data

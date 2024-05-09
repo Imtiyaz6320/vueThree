@@ -25,6 +25,7 @@ app.mount('#app'); -->
   <!-- <twentyOneRef/> -->
   <!-- <twentyTwoFom/> -->
   <!-- <twentyFourValid/> -->
+  <twentyFiveModifiers/>
   <!-- <HomeOne /> -->
   <!-- <htmlBinding /> -->
   <!-- <clssBinding /> -->
@@ -52,7 +53,7 @@ app.mount('#app'); -->
   <router-link to="/ContactPage/ok">OK__ContactPage</router-link><br> -->
 
   <!-- <FakeApicalls/> -->
-  <fakepostApi/>
+  <!-- <fakepostApi/> -->
 
 </template>
 
@@ -73,7 +74,7 @@ app.mount('#app'); -->
 // import twentyOneRef from './components/Tut-21 1ref.vue'
 // import twentyTwoFom from './components/Tut-22 simplForm.vue'
 // import twentyFourValid from './components/Tut-24 FormValidation.vue'
-// import twentyFiveModifiers from './components/Tut-25 modifiers.vue'
+import twentyFiveModifiers from './components/Tut-25 modifiers.vue'
 // import htmlBinding from './components/tut-17 htmlBinding.vue'
 // import clssBinding from './components/tut-18 classBinding.vue'
 // import nonProps from './components/tut-26 Non-Props.vue'
@@ -87,7 +88,7 @@ app.mount('#app'); -->
 // import thirtysixxxxxx from './components/tut36 lifeCyclUpdated.vue'
 // import thirtySeven from './components/tut37 1lifeCyclUnMount.vue'
 // import FakeApicalls from './components/tut42 ApiCall.vue'
-import fakepostApi from './components/tut44 postApi.vue'
+// import fakepostApi from './components/tut44 postApi.vue'
 
 
 export default {
@@ -109,7 +110,7 @@ export default {
     // twentyOneRef,
     // twentyTwoFom,
     // twentyFourValid,
-    // twentyFiveModifiers,
+    twentyFiveModifiers,
     // htmlBinding,
     // clssBinding,
     // nonProps,
@@ -123,7 +124,7 @@ export default {
     // thirtysixxxxxx,
     // thirtySeven,
     // FakeApicalls,
-    fakepostApi
+    // fakepostApi
 
   }
 }

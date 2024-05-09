@@ -7,14 +7,14 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      
-    }
-  },
+    data() {
+        return {
+
+        }
+    },
     name: 'twentyOneRef',
-    methods:{
-        getData(){
+    methods: {
+        getData() {
             // console.log("Hello imtiyaz Hussain");
             this.$refs.input.focus()
             let val = this.$refs.input.value;
@@ -22,6 +22,6 @@ export default {
             this.$refs.input.style.color = "red"
         }
     }
-    
+
 }
 </script>
