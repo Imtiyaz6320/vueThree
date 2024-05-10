@@ -1,19 +1,20 @@
 <template>
-    <!-- <div>
+  <!-- <div>
         <h1>Api call </h1>
     </div>
     <p v-for="item in list" :key="item">
     {{ item.id }} -----------   {{ item.email }}-------  {{ item.first_name }}--------  {{ item.avatar }}
     </p> -->
-    <!-- <h1>User Data </h1>
+  <!-- <h1>User Data </h1>
     <ul class="item" v-for="item in list" :key="item.id">
         <li>{{ item.id }}</li>
         <li>{{ item.email }}</li>
         <li>{{ item.first_name }}</li>
         <li>{{ item.last_name }}</li>
         <li><img :src="item.avatar"></li>
-    </ul> -->
-    <h1>User Data</h1>
+    </ul>
+     -->
+  <h1>User Data</h1>
   <ul class="item-list">
     <li class="item" v-for="item in list" :key="item.id">
       <div class="item-details">
@@ -25,22 +26,22 @@
       <img :src="item.avatar" alt="User Avatar" class="item-avatar">
     </li>
   </ul>
-    
+
 </template>
 <script>
 import axios from "axios";
 export default {
-    name:'FakeApicalls',
-    data() {
-        return {
-            list:[]
-        }
-    },
-   async mounted() {
-        let result = await axios.get("https://reqres.in/api/users?page1")
-        console.log("api data",result.data.data);
-        this.list = result.data.data
-    },
+  name: 'FakeApicalls',
+  data() {
+    return {
+      list: []
+    }
+  },
+  async mounted() {
+    let result = await axios.get("https://reqres.in/api/users?page6")
+    console.log("api data", result.data.data);
+    this.list = result.data.data
+  },
 }
 </script>
 

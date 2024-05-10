@@ -16,9 +16,11 @@ export default {
         console.log("Component is created, but not mounted yet.");
     },
     beforeMount() {
+        alert("beforeMount")
         console.log("beforeMount", this.$el);
     },
     mounted() {
+        alert("mounted")
         console.log("mounted", this.$el);
     }
 }

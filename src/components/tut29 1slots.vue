@@ -17,7 +17,7 @@
 
     <ChildnineSlots>
     <template v-slot:check1>
-      <img src="../../../pexels-porapak-apichodilok-346885.jpg" alt="Placeholder Image" class="styled-image"/>
+      <img src="../assets/pexels-nurseryart-346885.jpg" alt="Placeholder Image" class="styled-image"/>
     </template>
     <template v-slot:check2>
       <h1>imtiyaz</h1>

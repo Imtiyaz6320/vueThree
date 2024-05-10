@@ -68,7 +68,7 @@ vuejs 3  Teleport Component
 tut32 TeleportComponent.vue
 ---------------------------------------------------
 jaise ki hamko pata hai ki sab chize id="app" sa aur tab code run hota hai Teleport kay karta hai ki ya id="app" run nahi hota jaise koi header ya footer jo har component main show hota hai waise likan k liya used karta hai
-1 . What is a Teleport Component?
+1 .What is a Teleport Component?
 2. Example of Teleport Component
 3. Use of Teleport Component
 4. Interview Question

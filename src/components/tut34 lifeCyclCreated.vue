@@ -5,11 +5,11 @@
 </template>
 <script>
 export default {
-    name:'thrtyFour',
+    name: 'thrtyFour',
     data() {
         console.log("created");
         return {
-            name:'imtiyaz Hussain'
+            name: 'imtiyaz Hussain'
         }
     },
     beforeCreate() {
@@ -17,7 +17,7 @@ export default {
         alert(" hi Imtiyaz i am call beforeCreate ")
     },
     created() {
-        this.name="imo"  
+        this.name = "imo"
         alert(" okay Imtiyaz i am call Create ")
     },
 }
