@@ -5,7 +5,7 @@
   <!-- <childOne name="imtiyaz Hussain" />  -->
 
   <!-- passing obj in partto child  -->
-  <!-- <childOne :detils='user'/>  -->
+  <childOne :detils='user'/> 
 
   <!-- passing Methed in partto child  -->
   <childOne :getData='getData'/> 

@@ -19,15 +19,15 @@ app.mount('#app'); -->
   <!-- <tutEleven /> -->
   <!-- <tutThirteen/> -->
   <!-- <tutFifteen/> -->
+  <!-- <HomeOne /> -->
+  <!-- <htmlBinding /> -->
+  <!-- <clssBinding /> -->
   <!-- <propsOne /> -->
-  <!-- <twentyParent /> -->
+  <twentyParent />
   <!-- <twentyOneRef/> -->
   <!-- <twentyTwoFom/> -->
   <!-- <twentyFourValid/> -->
   <!-- <twentyFiveModifiers/> -->
-  <!-- <HomeOne /> -->
-  <!-- <htmlBinding /> -->
-  <!-- <clssBinding /> -->
   <!-- <nonProps/> -->
   <!-- <tutComputd /> -->
   <!-- <watchssone/> -->
@@ -52,12 +52,11 @@ app.mount('#app'); -->
   <router-link to="/ContactPage/ok">OK__ContactPage</router-link><br> -->
 
   <!-- <FakeApicalls/> -->
-  <fakepostApi />
+  <!-- <fakepostApi /> -->
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-// import HomeOne from './components/tut-16 HomeOne.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 // import HomePage from './components/HomePage.vue'
 // import HomePageNew from './components/Tut-7 Interpolation.vue'
@@ -67,14 +66,15 @@ app.mount('#app'); -->
 // import tutEleven from './components/Tut-11 getInputFiledVal.vue'
 // import tutThirteen from './components/Tut-13 ifElseConditio.vue'
 // import tutFifteen from './components/Tut-15 0passDataPartner .vue'
+// import HomeOne from './components/tut-16 HomeOne.vue'
+// import htmlBinding from './components/tut-17 htmlBinding.vue'
+// import clssBinding from './components/tut-18 classBinding.vue'
 // import propsOne from './components/Tut-19 1props.vue'
-// import twentyParent from './components/Tut-20 1child&parent.vue'
+import twentyParent from "./components/Tut-20 1child&parent.vue";
 // import twentyOneRef from './components/Tut-21 1ref.vue'
 // import twentyTwoFom from './components/Tut-22 simplForm.vue'
 // import twentyFourValid from './components/Tut-24 FormValidation.vue'
 // import twentyFiveModifiers from './components/Tut-25 modifiers.vue'
-// import htmlBinding from './components/tut-17 htmlBinding.vue'
-// import clssBinding from './components/tut-18 classBinding.vue'
 // import nonProps from './components/tut-26 Non-Props.vue'
 // import tutComputd from './components/tut-27 computed.vue'
 // import watchssone from './components/tut28 Watchers.vue'
@@ -86,13 +86,12 @@ app.mount('#app'); -->
 // import thirtysixxxxxx from './components/tut36 lifeCyclUpdated.vue'
 // import thirtySeven from './components/tut37 1lifeCyclUnMount.vue'
 // import FakeApicalls from './components/tut42 ApiCall.vue'
-import fakepostApi from "./components/tut44 postApi.vue";
+// import fakepostApi from "./components/tut44 postApi.vue";
 
 export default {
   name: "App",
   components: {
     // HelloWorld,
-    // HomeOne,
     // HelloWorld,
     // HomePage,
     // HomePageNew,
@@ -102,14 +101,15 @@ export default {
     // tutEleven,
     // tutThirteen,
     // tutFifteen,
+    // HomeOne,
+    // htmlBinding,
+    // clssBinding,
     // propsOne,
-    // twentyParent,
+    twentyParent,
     // twentyOneRef,
     // twentyTwoFom,
     // twentyFourValid,
     // twentyFiveModifiers,
-    // htmlBinding,
-    // clssBinding,
     // nonProps,
     // tutComputd,
     // watchssone,
@@ -121,7 +121,7 @@ export default {
     // thirtysixxxxxx,
     // thirtySeven,
     // FakeApicalls,
-    fakepostApi,
+    // fakepostApi,
   },
 };
 </script>
