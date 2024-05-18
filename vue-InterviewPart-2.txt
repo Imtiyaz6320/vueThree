@@ -1,0 +1,264 @@
+21	How do you define custom key modifier aliases?
+You can't use camelCase. Instead you can use kebab-case with double quotation marks
+You can define multiple values in an array format
+
+22	What are the supported System Modifier Keys?
+Vue supports below modifiers to trigger mouse or keyboard event listeners when the corresponding key is pressed,
+* .ctrl
+* .alt
+* .shift
+* .meta
+
+23	What are the supported Mouse Button Modifiers?
+Vue supports below mouse button modifiers
+.left
+.right
+.middle
+ <button
+   v-if="button === 'right'"
+   v-on:mousedown.right="increment"
+   v-on:mousedown.left="decrement"
+ />
+
+24	How do you implement two way binding?
+can use the v-model directive to create two-way data bindings on form input, textarea
+<input v-model="message" placeholder="Enter input here">
+<p>The message is: {{ message }}</p>
+
+25	What are the supported modifiers on model?
+There are three modifiers supported for v-model directive
+lazy,number,trim
+<!-- synced after "change" instead of "input" -->
+<input v-model.lazy="msg" >
+<input v-model.number="age" type="number">
+<input v-model.trim="msg">
+
+26	What are components and give an example?
+Components are reusable Vue instances with a name. They accept the same options as new Vue,
+such as data, computed, watch, methods, and lifecycle 
+
+27	What are props?
+ek componet sa dusara componet data trasfer karata hai comncation usko props bola t hai jaruri nahi child sa prnts mai jaya
+In Vue, props are custom attributes that you can register on any component.
+You define your data on the parent component and give it a value. Then, 
+you go to the child component that needs that data and pass the value to a prop attribute.
+Therefore, the data becomes a property in the child component. 
+
+28	When component needs a single root element?
+ when template has more than one element. In this case, you need to wrap the elements with a parent element.
+ <template>
+   <div class="todo-item">
+       <h2>{{ title }}</h2>
+       <div v-html="content"></div>
+   </div>
+</template>
+This way of adding multiple root nodes is called as fragments.
+<template>
+     <h2>{{ title }}</h2>
+     <div v-html="content"></div>
+</template>
+
+29	How do you communicate from child to parent using events?
+Child Component: Emit an event using $emit
+this.$emit('event-name', eventData);
+Parent Component: Listen for the event using v-on or the shorthand @
+<child-component @event-name="parentMethod"></child-component>
+
+30	How do you implement model on custom input components?
+v-model on custom input components in Vue.js, you need to define props and events in your custom component.
+Custom Input Component:
+<template>
+  <input :value="value" @input="$emit('input', $event.target.value)">
+</template>
+
+<script>
+export default {
+  props: ['value']
+};
+</script>
+
+Using the Custom Component with v-model
+<template>
+  <div>
+    <custom-input v-model="text"></custom-input>
+    <p>Input Value: {{ text }}</p>
+  </div>
+</template>
+
+<script>
+import CustomInput from './CustomInput.vue';
+
+export default {
+  components: {
+    CustomInput
+  },
+  data() {
+    return {
+      text: ''
+    };
+  }
+};
+</script>
+
+
+
+31	What are slots?
+https://www.w3schools.com/vue/showvue.php?filename=demo_slots_3
+
+Slots are a powerful feature in Vue that allow for more flexible and reusable components.
+We use slots in Vue to send content from the parent into the <template> of a child component.
+
+32	What is global registration in components?
+add  a main.js file global registration
+import MyComponent from './components/MyComponent.vue';
+Vue.component('MyComponent', MyComponent);
+
+call any components
+<MyComponent />
+// No need to import MyComponent here
+
+
+33	Why do you need local registration?
+Local registration in Vue.js is used to register components only within the scope of a particular parent component.
+This approach is beneficial for several reasons:
+Encapsulation: It keeps the component's usage localized to where it is needed, making it clear which components are dependencies of a particular parent component.
+Code Organization: It helps maintain a cleaner global namespace, reducing the chance of naming conflicts and making the codebase easier to manage.
+Performance: It can improve performance by limiting the number of components Vue needs to keep track of globally, potentially reducing memory usage.
+Testing: It makes components easier to test and mock, as dependencies are explicitly stated.
+
+// ParentComponent.vue
+<template>
+  <div>
+    <MyComponent />
+  </div>
+</template>
+
+<script>
+import MyComponent from './MyComponent.vue';
+
+export default {
+  components: {
+    MyComponent
+  }
+  // Parent component logic
+};
+</script>
+
+
+
+
+34	What is the difference between local and global registration in module system?
+Local Registration: Components are registered within a specific component and can only be used within that component.
+ This helps keep the global namespace clean, avoids naming conflicts, and is useful for components used in only one part of the application.
+
+Global Registration: Components are registered once and can be used in any component throughout the application.
+ This is convenient for components that are reused frequently across different parts of the app.
+
+35	What are possible prop types?
+props: {
+  name: String,
+  age: Number,
+  isAuthenticated: Boolean,
+  phoneNumbers: Array,
+  address: Object
+}
+
+36	What is the data flow followed by props?
+ Parent to Child: Data is passed from a parent component to a child component via `props`.
+ Immutable in Child: The child component receives `props` as read-only, meaning the child cannot directly modify the `props` it receives.
+ This ensures a clear and predictable data flow, maintaining a single source of truth for the data.
+
+37	What are non prop attributes?
+In Vue.js, non-prop attributes are attributes that are passed to a component but are not explicitly defined as props. 
+These attributes are automatically added to the root element of the component.
+Child Component
+<template>
+  <div>
+    <!-- Component content -->
+  </div>
+</template>
+<script>
+</script>
+
+Parent Component
+<template>
+  <div>
+    <child-component id="child" class="child-class"></child-component>
+  </div>
+</template>
+<script>
+import ChildComponent from './ChildComponent.vue';
+export default {
+  components: {
+    ChildComponent
+  }
+};
+</script>
+
+
+38	Describe about validations available for props?
+Required Prop:
+props: {
+  name: {
+    type: String,
+    required: true
+  }
+}
+Default Value:
+props: {
+  isActive: {
+    type: Boolean,
+    default: false
+  }
+}
+Custom Validator
+props: {
+  score: {
+    type: Number,
+    validator(value) {
+      return value >= 0 && value <= 100;
+    }
+  }
+}
+
+39	How do you customize model directive for a component?
+
+40	What are the possible ways to provide transitions?
+There are many ways Vue provides transition effects when items are inserted, updated, or removed from the DOM.
+
+Below are the possible ways,
+
+Automatically apply classes for CSS transitions and animations
+Integrate 3rd-party CSS animation libraries. For example, Animate.css
+Use JavaScript to directly manipulate the DOM during transition hooks
+Integrate 3rd-party JavaScript animation libraries. For example, Velocity.js
+
+
+41	What is vue router and their features?
+Vue Router is a official routing library for single-page applications designed for use with the Vue.js framework.
+
+Below are their features,
+
+Nested route/view mapping
+Modular, component-based router configuration
+Route params, query, wildcards
+View transition effects powered by Vue.js' transition system
+Fine-grained navigation control
+Links with automatic active CSS classes
+HTML5 history mode or hash mode, with auto-fallback in IE9
+Restore scroll position when going back in history mode
+
+42	What are the steps to use vue router and give an example?
+npm install vue-router
+Create a router file (e.g., router.js) 
+Import the router to the main entry file (main.js) and tell Vue to use this router.
+Add Router View and Links in Your Components
+
+43	What is dynamic route matching?
+Sometimes it may be required to map routes to the same component based on a pattern.
+
+44	How to make router param changes as reactive?
+When you navigate from one URL to other(mapped with a single component) using routes with params then the same component instance will be reused. Even though it is more efficient than destroying the old instance and then creating a new one, the lifecycle hooks of the component will not be called
+
+45	What is route matching priority?
+Sometimes the URL might be matched by multiple routes and the confusion of which route need to be mapped is resolved by route matching priority. The priority is based on order of routes configuration. i.e, The route which declared first has higher priority.
