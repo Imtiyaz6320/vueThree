@@ -1,0 +1,179 @@
+46	What are nested routes?
+Nested routes in Vue.js are routes defined within other routes, allowing for hierarchical or multi-level navigation in an application. 
+They enable you to render child components inside a parent component when a specific route is accessed.
+
+47	What are single file components?
+Single File Components (SFCs) in Vue.js are files with a .vue extension that encapsulate a component's template, script, 
+and styles in a single file.
+
+48	Is Single File Components violating separation of concerns?
+No, Single File Components do not violate separation of concerns. Instead, they promote a different kind of 
+separation by encapsulating the component’s logic, structure, 
+and styles within one file, which makes the component self-contained and easier to manage
+
+49	What are the problems solved by Single File Components?
+Encapsulation: Keeps all component-related code in one place.
+Maintainability: Easier to read, understand, and maintain individual components.
+Scoped Styles: Allows styles to be scoped to the component, preventing conflicts.
+Tooling Support: Enhances development experience with tools like linters, formatters, and build setups.
+
+50	What are filters?
+Filters in VueJS are used to format data displayed to the user, typically in templates.
+
+51	What are the different ways to create filters?
+Filters can be created:
+- Globally: by defining them in the `Vue.filter` method.
+- Locally: by defining them in the `filters` option of a Vue component.
+
+52	How do you chain filters
+Filters can be chained by using the pipe (`|`) symbol in the template. For example: `{{ message | filterA | filterB }}`.
+
+53	Is it possible to pass parameters for filters?
+Yes, parameters can be passed to filters by adding them after a colon. For example: `{{ message | filterA('param1', 'param2') }}`.
+
+54	What are plugins and their various services?
+Plugins in VueJS are reusable components that can add global functionality to a Vue application. They can include methods, 
+directives, mixins, or even entire libraries.
+Various Services of Plugins:
+1. Global Methods/Properties: Add methods or properties that can be accessed globally.
+2. Global Directives: Register custom directives that can be used throughout the application.
+3. Component Options: Add custom options for components.
+4. Mixins: Inject custom options into components.
+5. Vue Instance Methods: Add methods directly to the Vue prototype.
+
+55	How to create a plugin?
+const MyPlugin = {
+  install(Vue, options) {
+    // Add a global method
+    Vue.myGlobalMethod = function() {
+      // some logic
+    }
+
+    // Add a global directive
+    Vue.directive('my-directive', {
+      bind(el, binding, vnode, oldVnode) {
+        // some logic
+      }
+    })
+
+    // Add an instance method
+    Vue.prototype.$myMethod = function(methodOptions) {
+      // some logic
+    }
+  }
+}
+
+export default MyPlugin;
+
+56	How to use a plugin?
+import MyPlugin from './path-to-my-plugin';
+Use the Plugin in Your Vue Application:
+import Vue from 'vue';
+import MyPlugin from './path-to-my-plugin';
+
+Vue.use(MyPlugin);
+new Vue({
+  // your Vue app options
+}).$mount('#app');
+
+57	What are mixins?
+ Mixins are reusable chunks of code in Vue.js that can be included in components to share functionality
+
+58	What are global mixins?
+Global mixins are mixins that apply to every Vue instance in an application
+
+59	How do you use mixins in CLI?
+1. Create a mixin file, e.g., `mixin.js`:
+   export default {
+     data() {
+       return {
+         sharedData: 'This is shared'
+       };
+     },
+     methods: {
+       sharedMethod() {
+         console.log('This is a shared method');
+       }
+     }
+   };
+2. Import and use the mixin in your component:
+   import myMixin from './mixin.js';
+   export default {
+     mixins: [myMixin],
+     // component-specific code
+   };
+
+
+60	What are the merging strategies in mixins?
+- Data: Merged data objects, with component data taking precedence in case of conflicts.
+- Methods: Methods are combined, and if there are conflicts, the component's method overrides the mixin's method.
+- Hooks: Lifecycle hooks are merged into arrays and called sequentially.
+
+61	What are custom options merging strategies?
+You can define custom merging strategies using Vue.config.optionMergeStrategies to control how custom options 
+are merged between mixins and components.
+Vue.config.optionMergeStrategies.myOption = function (parent, child, vm) {
+  // custom merge logic
+  return child ? child : parent;
+};
+
+
+62	What are custom directives?
+ Custom directives in Vue.js allow you to attach reusable behavior to components and elements, 
+ similar to built-in directives like `v-model` or `v-show`. 
+ They are useful for directly manipulating the DOM or adding custom behavior to elements.
+
+63	How do you register directives locally?
+directives: {
+     focus: {
+       // directive definition
+       inserted: function (el) {
+         el.focus();
+       }
+     }
+   }
+
+64	What are the hook functions provided by directives?
+ Vue.js provides several lifecycle hooks for directives:
+   - `bind`: Called only once, when the directive is first bound to the element.
+   - `inserted`: Called when the bound element has been inserted into its parent node.
+   - `update`: Called after the containing component has updated, but possibly before its children have updated.
+   - `componentUpdated`: Called after the containing component and its children have updated.
+   - `unbind`: Called only once, when the directive is unbound from the element.
+
+65	What are the directive Hook Arguments?
+Directive hooks are passed these arguments:
+   - `el`: The element the directive is bound to.
+   - `binding`: An object containing the directive’s details like `value`, `oldValue`, `expression`, etc.
+   - `vnode`: The virtual node produced by Vue’s compiler.
+   - `oldVnode`: The previous virtual node, only available in the `update` and `componentUpdated` hooks.
+
+66	How do you pass multiple values to a directive?
+You can pass multiple values to a directive using an object. For instance:
+   <div v-my-directive="{ color: 'blue', text: 'Hello' }"></div>
+
+67	What is function shorthand in directive hooks?
+ If you only need to use the `bind` and `update` hooks for your directive and they will have the same functionality, 
+ you can use the function shorthand by defining the directive as a function:
+   Vue.directive('my-directive', function(el, binding) {
+     // logic for both bind and update
+   });
+   
+68	What is the benefit of render functions over templates?
+Render functions provide greater flexibility and control over the virtual DOM than templates. 
+They allow for more dynamic and complex component logic that might be difficult or awkward to express with templates alone.
+
+69	What is a render function?
+A render function in Vue.js is a method that directly returns `VNode` (virtual DOM nodes) using JavaScript. 
+It gives developers more direct control over the virtual DOM structure and the rendering process.
+
+70	Explain the structure of createElement with arguments
+1. Tag: A string that specifies the type of the element to be created, or a component object.
+2. Data (optional): An object that holds the data attributes, styles, classes, directives, event listeners, and other properties.
+3. Children (optional): This can be a string if you're just passing text, an array of `VNodes`, or a combination of strings and `VNodes` for more complex structures.
+
+createElement(
+  'div', 
+  { class: 'example' }, 
+  [createElement('p', 'Hello Vue')]
+)
