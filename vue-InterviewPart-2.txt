@@ -155,7 +155,7 @@ Global Registration: Components are registered once and can be used in any compo
  This is convenient for components that are reused frequently across different parts of the app.
 
 35	What are possible prop types?
-props: {
+props: {c 
   name: String,
   age: Number,
   isAuthenticated: Boolean,
@@ -169,6 +169,7 @@ props: {
  This ensures a clear and predictable data flow, maintaining a single source of truth for the data.
 
 37	What are non prop attributes?
+
 In Vue.js, non-prop attributes are attributes that are passed to a component but are not explicitly defined as props. 
 These attributes are automatically added to the root element of the component.
 Child Component
