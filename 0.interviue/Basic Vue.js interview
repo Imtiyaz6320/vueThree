@@ -1,0 +1,188 @@
+1.What is Vue.js, and what are its key features?
+Vue.js is a progressive JavaScript framework for building user interfaces. Key features include:
+
+Reactive data binding
+Component-based architecture
+Vue Router for single-page applications
+Vuex for state management
+Single File Components (SFCs)
+Directives (v-if, v-for, v-bind, etc.)
+
+
+2.How do you create a new Vue instance?
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+});
+
+3.Explain the Vue instance lifecycle hooks.
+Vue instance lifecycle hooks are specific methods that allow you to perform actions at different stages of a component's lifecycle. The main lifecycle hooks are beforeCreate, created, beforeMount, mounted,beforeUpdate, updated, beforeDestroy, and destroyed.
+
+4.What is data binding in Vue.js?
+Data binding in Vue.js connects the data in your application to the DOM. Vue supports
+One-way data binding: Using v-bind or : to bind data to an attribute.
+Two-way data binding: Using v-model to bind data to form inputs.
+
+5.What is the difference between v-bind and v-model directives?
+v-bind: One-way data binding, binds data to HTML attributes.
+<img :src="imageUrl">
+v-model: Two-way data binding, synchronizes data between the model and the view
+<input v-model="message">
+
+6.How do you handle user input and events in Vue.js?
+Use the v-on directive (or @) to listen for DOM events and call methods.
+<input v-model="message">
+<button @click="handleClick">Click me</button>
+
+
+7.What is the purpose of computed properties in Vue.js?
+Computed properties are used for complex calculations or data transformations, and they cache their results for efficiency.
+
+8.How can you conditionally render elements in Vue.js?
+the v-if, v-else, and v-else-if directives. These directives allow you to control the rendering of elements based on certain conditions or expressions.
+
+9.How do you loop through an array in Vue.js using v-for?
+can use the v-for directive. It allows you to iterate over an array and render elements for each item in the array.
+
+
+10.What is the significance of the "key" attribute when using v-for?
+The "key" attribute in v-for ensures efficient list rendering by uniquely identifying each item, helping Vue track changes and optimize updates.
+
+11.Explain directives in Vue.js.
+Directives are special tokens in the markup that tell the library to do something to a DOM element. Examples include v-if, v-for, v-bind, and v-model.
+
+12.How can you share the data between components in Vue.js application?
+Data can be shared between components using:
+
+Props (parent to child)
+Custom events with emit (child to parent)
+Vuex (global state management)
+Provide/Inject (ancestor to descendant)
+
+
+13.How do you handle conditional rendering using the "v-if" and "v-else" directives?
+v-if and v-else directives to handle conditional rendering in Vue.js. true,
+
+14.What are the Jest and Mocha in Vue CLI?
+Jest and Mocha are testing frameworks supported by Vue CLI. Jest is used for unit testing with a focus on simplicity, while Mocha is a feature-rich JavaScript test framework.
+
+15.What is the usage of $parent?
+$parent is used to access the parent component instance from a child component.
+
+16.What is a Key?
+A key is a unique identifier for elements in a list rendered by v-for. It helps Vue track elements and optimize re-rendering.
+
+17.Explain the significance of the "ref" attribute in Vue.js and when to use it.
+The ref attribute provides a way to access DOM elements or component instances directly. It is used when you need to manipulate DOM elements or access component methods directly.
+<input ref="myInput">
+this.$refs.myInput.focus();
+
+
+18.What is the "v-once" directive, and how does it differ from other directives?
+v-once renders the element and component only once and does not update it on data changes, improving performance for static content.
+<p v-once>{{ message }}</p>
+
+19.How do you handle two-way data binding in Vue.js using the "v-model" directive?
+Use v-model on form elements to create a two-way binding between the input and the component data.
+<input v-model="message">
+
+20.Explain the component Prop.
+Props are custom attributes you can register on a component to pass data from a parent component to a child component.
+props: ['title']
+<child-component :title="parentTitle"></child-component>
+
+
+
+21.What is the One-Way Data Flow in Vue.js?
+In Vue.js, data flows from parent to child components via props, ensuring a predictable data flow and easier debugging.
+
+22.Explain the concept of event modifiers in Vue.js and provide some examples.
+Event modifiers are special keywords that allow you to modify event behavior.
+@click.stop - Stops event propagation.
+@submit.prevent - Prevents default form submission.
+@keyup.enter - Triggers event only on "Enter" key press
+
+23.What is the single file component?
+A single file component (SFC) in Vue.js encapsulates HTML, JavaScript, and CSS in a single .vue file, promoting modularity and reusability.
+
+24.How can you handle keyboard events in Vue.js applications?
+Use v-on directive with key modifiers.
+<input @keyup.enter="submitForm">
+
+25.What is the purpose of the "v-html" directive, and what are its potential security risks?
+v-html is used to render raw HTML. It can introduce security risks like XSS (Cross-Site Scripting) if the content is not sanitized.
+
+26.What is the Vue CLI, and why is it useful for Vue.js development?
+Vue CLI is a command-line tool for scaffolding and managing Vue.js projects, providing features like project templates, plugins, and build tools.
+
+27.How do you handle errors and exceptions in Vue.js applications?
+Use error handling lifecycle hooks like errorCaptured or global error handlers with Vue.config.errorHandler.
+
+28.Explain the concept of watchers in Vue.js and when to use them
+Watchers observe changes to a data property and execute a callback function when the property changes, useful for asynchronous operations or complex data watching.
+watch: {
+  someData(newVal, oldVal) {
+    // Perform action on data change
+  }
+}
+
+
+29.How can you render raw HTML in Vue.js templates?
+Use the v-html directive.
+<div v-html="rawHtml"></div>
+
+30.How do you bind CSS styles dynamically in Vue.js using the "v-bind" directive?
+Use v-bind with :style or :class.
+<div :style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+
+31.Explain the use of filters in Vue.js. Are filters recommended in modern Vue.js applications?
+Filters are used to format data in templates. They are not recommended in Vue 3, as their functionality can be replaced with methods or computed properties.
+
+32.What is the purpose of the "v-pre" directive in Vue.js templates?
+v-pre skips compilation for this element and all its children, useful for displaying raw mustache syntax.
+<span v-pre>{{ raw }}</span>
+
+33.How can you handle and manage the local component state in Vue.js?
+Local component state is managed using the data option, storing stateful data.
+data() {
+  return {
+    localState: 'some value'
+  };
+}
+
+34.What is the Vue.js Devtools, and how can it assist in debugging Vue.js applications?
+Vue.js Devtools is a browser extension that provides tools for inspecting and debugging Vue.js applications, allowing you to examine component hierarchies, state, and events.
+
+35.How can you handle conditional classes in Vue.js using the "v-bind" directive?
+Use v-bind:class to apply classes conditionally.
+<div :class="{ active: isActive, 'text-danger': hasError }"></div>
+
+36.Explain the use of the "v-once" directive and its implications for rendering.
+v-once renders the element and component only once and does not update it on data changes, improving performance for static content
+<p v-once>{{ message }}</p>
+
+37.How do you handle form submissions in Vue.js applications?
+Use the v-on:submit.prevent directive to handle form submissions.
+<form @submit.prevent="handleSubmit">
+  <!-- form inputs -->
+</form>
+
+
+38.What are the differences between "v-show" and "v-if" directives in terms of rendering behavior?
+v-if: Completely removes or re-renders elements in the DOM based on condition.
+v-show: Toggles the visibility of elements using CSS display.
+
+39.How do you create custom events in Vue.js?
+Use $emit to create and dispatch custom events from a child component
+this.$emit('custom-event', payload);
+<child-component @custom-event="handleEvent"></child-component>
+
+40.Explain the concept of template ref and provide a scenario where you would use it.
+ref is used to access DOM elements or component instances directly.
+<input ref="myInput">
+this.$refs.myInput.focus();
+
+41.How do you manage the application state without using Vuex?
+Use local component state, props for parent-to-child data flow, custom events with emit for child-to-parent communication, and provide/inject for ancestor-to-descendant state sharing
