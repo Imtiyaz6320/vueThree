@@ -7,6 +7,14 @@ Vue Router for single-page applications
 Vuex for state management
 Single File Components (SFCs)
 Directives (v-if, v-for, v-bind, etc.)
+What are the major features of VueJS?
+1. Reactive Data Binding: Automatically updates your UI whenever your data changes.
+2. Components: Reusable custom elements you can use to build your interface.
+3. Templates: VueJS provides HTML based templates that bind the DOM with the Vue instance data
+4. Virtual DOM: Improves performance by minimizing direct DOM manipulation.
+5. Routing: Navigation between pages is achieved through vue-router
+6. Composability: Easily integrate or use alongside other libraries or existing projects.
+7. Easy to Learn: With a gentle learning curve, developers can quickly start building user interfaces.VueJS is light weight library compared to other frameworks.
 
 
 2.How do you create a new Vue instance?
@@ -18,7 +26,16 @@ new Vue({
 });
 
 3.Explain the Vue instance lifecycle hooks.
-Vue instance lifecycle hooks are specific methods that allow you to perform actions at different stages of a component's lifecycle. The main lifecycle hooks are beforeCreate, created, beforeMount, mounted,beforeUpdate, updated, beforeDestroy, and destroyed.
+Vue instance lifecycle hooks are specific methods that allow you to perform actions at different stages of a component's lifecycle. 
+The main lifecycle hooks are beforeCreate, created, beforeMount, mounted,beforeUpdate, updated, beforeDestroy, and destroyed.
+1. beforeCreate: Runs before the instance is fully initialized.
+2. created: Runs after the instance is created,
+3. beforeMount: Runs right before the mounting begins, before the component is rendered.
+4. mounted: Runs after the component is mounted to the DOM, where you can access the reactive component and templates are rendered.
+5. beforeUpdate: Runs when data changes, before the DOM is patched and re-rendered.
+6. updated: Runs after data changes and the DOM is patched.
+7. beforeDestroy: Runs right before tearing down a component, where you can perform cleanup actions.
+8. destroyed: Runs after a component is destroyed, cleaning up its instance. 
 
 4.What is data binding in Vue.js?
 Data binding in Vue.js connects the data in your application to the DOM. Vue supports
@@ -75,7 +92,8 @@ $parent is used to access the parent component instance from a child component.
 A key is a unique identifier for elements in a list rendered by v-for. It helps Vue track elements and optimize re-rendering.
 
 17.Explain the significance of the "ref" attribute in Vue.js and when to use it.
-The ref attribute provides a way to access DOM elements or component instances directly. It is used when you need to manipulate DOM elements or access component methods directly.
+The ref attribute provides a way to access DOM elements or component instances directly. It is used when you need to manipulate DOM elements or access 
+component methods directly.
 <input ref="myInput">
 this.$refs.myInput.focus();
 
@@ -121,7 +139,8 @@ Vue CLI is a command-line tool for scaffolding and managing Vue.js projects, pro
 Use error handling lifecycle hooks like errorCaptured or global error handlers with Vue.config.errorHandler.
 
 28.Explain the concept of watchers in Vue.js and when to use them
-Watchers observe changes to a data property and execute a callback function when the property changes, useful for asynchronous operations or complex data watching.
+Watchers observe changes to a data property and execute a callback function when the property changes, useful for asynchronous operations or complex 
+data watching.
 watch: {
   someData(newVal, oldVal) {
     // Perform action on data change
@@ -153,7 +172,8 @@ data() {
 }
 
 34.What is the Vue.js Devtools, and how can it assist in debugging Vue.js applications?
-Vue.js Devtools is a browser extension that provides tools for inspecting and debugging Vue.js applications, allowing you to examine component hierarchies, state, and events.
+Vue.js Devtools is a browser extension that provides tools for inspecting and debugging Vue.js applications, 
+allowing you to examine component hierarchies, state, and events.
 
 35.How can you handle conditional classes in Vue.js using the "v-bind" directive?
 Use v-bind:class to apply classes conditionally.
@@ -185,4 +205,5 @@ ref is used to access DOM elements or component instances directly.
 this.$refs.myInput.focus();
 
 41.How do you manage the application state without using Vuex?
-Use local component state, props for parent-to-child data flow, custom events with emit for child-to-parent communication, and provide/inject for ancestor-to-descendant state sharing
+Use local component state, props for parent-to-child data flow, custom events with emit for child-to-parent communication,
+ and provide/inject for ancestor-to-descendant state sharing

@@ -1,5 +1,6 @@
 1. Explain the concept of mixins and their use cases in Vue.js.
-Mixins are a way to distribute reusable functionalities across Vue components. They can contain any component options (data, methods, hooks, etc.) and are used to share common code, like reusing logic across multiple components.
+Mixins are a way to distribute reusable functionalities across Vue components. They can contain any component options (data, methods, hooks, etc.) 
+and are used to share common code, like reusing logic across multiple components.
 
 2. How can you handle dynamic routes and route parameters in Vue Router?
 Define dynamic routes using `:` in the route path, and access parameters via `$route.params`.
@@ -16,13 +17,17 @@ this.$route.params.id
  Render functions: More flexible and powerful, allow for advanced use cases like dynamic component rendering. Harder to read and write.
 
 4. How do you perform API calls in Vue.js applications, and why would you use Axios or Fetch API?
-Use Axios or Fetch API for making HTTP requests. Axios is popular for its ease of use, automatic JSON transformation, and extensive features like interceptors. Fetch is a native JavaScript API, simpler and built into browsers.
+Use Axios or Fetch API for making HTTP requests. Axios is popular for its ease of use, automatic JSON transformation, and extensive 
+features like interceptors. Fetch is a native JavaScript API, simpler and built into browsers.
 
 5. Explain the concept of serverside rendering (SSR) and its advantages in Vue.js.
-SSR renders the initial HTML on the server, improving SEO and reducing time to content. It provides a faster initial load and better performance for users with slow connections.
+SSR renders the initial HTML on the server, improving SEO and reducing time to content. It provides a faster initial load and better 
+performance for 
+users with slow connections.
 
 6. How can you handle data caching in Vue.js applications?
-Use browser storage (localStorage or sessionStorage), Vuex with persistence plugins, or service workers to cache data for offline usage and performance optimization.
+Use browser storage (localStorage or sessionStorage), Vuex with persistence plugins, or service workers to cache data for 
+offline usage and performance optimization.
 
 7. Discuss the role of "nextTick" in Vue.js and its use cases.
 `nextTick` is used to execute a callback after the next DOM update cycle, ensuring the DOM is updated before running code that depends on it.
@@ -52,12 +57,14 @@ provide() {
 inject: ['key']
 
 12. Explain the concept of dynamic components and provide use cases.
-Dynamic components allow you to switch between components using the `component` element with `is` attribute, useful for tabs or component swapping.
+Dynamic components allow you to switch between components using the `component` element with `is` attribute, useful for tabs or component 
+swapping.
 <component :is="currentComponent"></component>
 
 
 13. What are render functions in Vue.js, and when would you use them?
-Render functions provide a programmatic way to describe the UI. Use them for complex component logic that is difficult to achieve with templates.
+Render functions provide a programmatic way to describe the UI. Use them for complex component logic that is difficult to achieve 
+with templates.
 
 render(h) {
   return h('div', this.message);
@@ -130,7 +137,8 @@ Vue.js loads asynchronous components only when needed, improving initial load ti
 const AsyncComponent = () => import('./AsyncComponent.vue');
 
 21. Explain the Virtual DOM and how it contributes to Vue.js' performance.
-The Virtual DOM is a lightweight in-memory representation of the real DOM. Vue.js uses it to efficiently update the view by comparing the new virtual DOM with the previous one and applying only the necessary changes to the real DOM, minimizing performance bottlenecks.
+The Virtual DOM is a lightweight in-memory representation of the real DOM. Vue.js uses it to efficiently update the view by comparing the 
+new virtual DOM with the previous one and applying only the necessary changes to the real DOM, minimizing performance bottlenecks.
 
 22. Discuss the concept of watchers versus computed properties, and when to use each.
 - Watchers: Observe changes to a data property and execute a callback function, useful for asynchronous operations or complex data watching.
@@ -154,7 +162,8 @@ Vue.directive('focus', {
 - Implement server-side rendering (SSR).
 
 25. Explain the concept of dependency injection in Vue.js.
-Dependency injection in Vue.js is handled through the `provide` and `inject` APIs, allowing ancestor components to provide dependencies that descendant components can inject and use, promoting decoupling and reusability.
+Dependency injection in Vue.js is handled through the `provide` and `inject` APIs, allowing ancestor components to provide 
+dependencies that descendant components can inject and use, promoting decoupling and reusability.
 
 26. Discuss the differences between "template refs" and "DOM refs" in Vue.js.
 - Template refs: Access Vue component instances or DOM elements defined in the template using `ref` attributes.
@@ -209,7 +218,8 @@ export default {
 
 
 32. Explain the use of "scoped slots" and how they differ from regular slots.
-Scoped slots allow parent components to pass data to the slot's content. Unlike regular slots, scoped slots can receive data from the child component.
+Scoped slots allow parent components to pass data to the slot's content. Unlike regular slots, scoped slots can receive data from the
+ child component.
 
 <child>
   <template #default="slotProps">
@@ -230,7 +240,8 @@ const MyComponent = () => import('./MyComponent.vue');
 
 
 35. Discuss the concept of dynamic imports and how they enhance application performance.
-Dynamic imports allow components to be loaded asynchronously, splitting the code into smaller chunks that are loaded on demand, improving initial load time and performance.
+Dynamic imports allow components to be loaded asynchronously, splitting the code into smaller chunks that are loaded on demand, 
+improving initial load time and performance.
 
 36. How can you use the "renderError" function in Vue.js to handle errors in render functions?
 The `renderError` function is used to catch and handle errors in the render process, providing a fallback UI.
