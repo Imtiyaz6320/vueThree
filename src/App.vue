@@ -53,6 +53,7 @@ app.mount('#app'); -->
 
   <!-- <FakeApicalls/> -->
   <!-- <fakepostApi /> -->
+  <LocationWeather/>
 </template>
 
 <script>
@@ -70,7 +71,7 @@ app.mount('#app'); -->
 // import htmlBinding from './components/tut-17 htmlBinding.vue'
 // import clssBinding from './components/tut-18 classBinding.vue'
 // import propsOne from './components/Tut-19 1props.vue'
-import twentyParent from "./components/Tut-20 1child&parent.vue";
+// import twentyParent from "./components/Tut-20 1child&parent.vue";
 // import twentyOneRef from './components/Tut-21 1ref.vue'
 // import twentyTwoFom from './components/Tut-22 simplForm.vue'
 // import twentyFourValid from './components/Tut-24 FormValidation.vue'
@@ -87,6 +88,7 @@ import twentyParent from "./components/Tut-20 1child&parent.vue";
 // import thirtySeven from './components/tut37 1lifeCyclUnMount.vue'
 // import FakeApicalls from './components/tut42 ApiCall.vue'
 // import fakepostApi from "./components/tut44 postApi.vue";
+import LocationWeather from "./components/mineProj.vue"
 
 export default {
   name: "App",
@@ -105,7 +107,7 @@ export default {
     // htmlBinding,
     // clssBinding,
     // propsOne,
-    twentyParent,
+    // twentyParent,
     // twentyOneRef,
     // twentyTwoFom,
     // twentyFourValid,
@@ -122,6 +124,7 @@ export default {
     // thirtySeven,
     // FakeApicalls,
     // fakepostApi,
+    LocationWeather
   },
 };
 </script>
